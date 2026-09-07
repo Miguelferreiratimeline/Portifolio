@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Portfólio de Miguel Almeida, editor de vídeo." />
+  <meta name="description" content="Portfólio de Miguel Ferreira, editor de vídeo." />
   <title>Miguel Ferreira — Video Editor</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,11 +14,11 @@
   <div class="noise"></div>
 
   <header class="navbar">
-    <a class="logo" href="#inicio">MA<span>.</span></a>
+    <a class="logo" href="#inicio">MF<span>.</span></button>
     <nav>
-      <a href="#trabalhos">Trabalhos</a>
-      <a href="#sobre">Sobre</a>
-      <a href="#servicos">Serviços</a>
+      <a href="#trabalhos">Trabalhos</button>
+      <a href="#sobre">Sobre</button>
+      <a href="#servicos">Serviços</button>
       <a href="#contato">Contato</a>
     </nav>
     <a class="nav-cta" href="#contato">Vamos conversar</a>
@@ -33,7 +33,7 @@
           <span>PRENDE ATENÇÃO.</span>
         </h1>
         <p>
-          Sou Miguel Ferreira Transformo gravações brutas em vídeos dinâmicos,
+          Sou Miguel Ferreira. Transformo gravações brutas em vídeos dinâmicos,
           envolventes e feitos para manter o público assistindo.
         </p>
         <div class="hero-actions">
@@ -99,8 +99,9 @@
       </div>
 
       <div class="projects-grid">
-        <article class="project project-large reveal">
+        <button class="project project-large reveal" data-video-id="bG6tj_33w1g" type="button">
           <div class="project-thumb thumb-one">
+            <img class="project-image" src="projeto-minecraft.jpg" alt="Thumbnail do Projeto Minecraft" loading="lazy">
             <div class="thumb-label">YOUTUBE / GAMING</div>
             <div class="play">▶</div>
           </div>
@@ -111,10 +112,11 @@
             </div>
             <span>01</span>
           </div>
-        </article>
+        </a>
 
-        <article class="project reveal delay-1">
+        <button class="project reveal delay-1" data-video-id="DncdZjsns64" type="button">
           <div class="project-thumb thumb-two">
+            <img class="project-image" src="short-form.jpg" alt="Thumbnail do Short Form" loading="lazy">
             <div class="thumb-label">SHORT FORM</div>
             <div class="play">▶</div>
           </div>
@@ -125,10 +127,11 @@
             </div>
             <span>02</span>
           </div>
-        </article>
+        </a>
 
-        <article class="project reveal">
+        <button class="project reveal" data-video-id="a3WpZRrOmhk" type="button">
           <div class="project-thumb thumb-three">
+            <img class="project-image" src="video-longo.jpeg" alt="Thumbnail do Vídeo Longo" loading="lazy">
             <div class="thumb-label">YOUTUBE / LONG FORM</div>
             <div class="play">▶</div>
           </div>
@@ -139,10 +142,11 @@
             </div>
             <span>03</span>
           </div>
-        </article>
+        </a>
 
-        <article class="project project-large reveal delay-1">
+        <button class="project project-large reveal delay-1" data-video-id="CoSm1BUZ6qA" type="button">
           <div class="project-thumb thumb-four">
+            <img class="project-image" src="gameplay-edit.jpg" alt="Thumbnail do Gameplay Edit" loading="lazy">
             <div class="thumb-label">GAMING</div>
             <div class="play">▶</div>
           </div>
@@ -153,11 +157,11 @@
             </div>
             <span>04</span>
           </div>
-        </article>
+        </a>
       </div>
 
       <div class="project-note reveal">
-        <p>Troque estes cards pelos seus vídeos reais. Você pode usar links do YouTube não listado sem precisar hospedar vídeo no GitHub.</p>
+        <p>Clique em qualquer projeto para assistir sem sair do portfólio.</p>
       </div>
     </section>
 
@@ -194,7 +198,7 @@
         </h2>
         <div class="about-columns">
           <p>
-            Sou <strong>Miguel Almeida</strong>, editor de vídeo focado em transformar
+            Sou <strong>Miguel Ferreira</strong>, editor de vídeo focado em transformar
             gravações brutas em conteúdos dinâmicos e envolventes.
           </p>
           <p>
@@ -243,18 +247,36 @@
         <div class="contact-actions">
           <a href="mailto:Miguelferreira.timeline@gmail.com" class="btn primary">Enviar e-mail</a>
           <a href="#" class="btn ghost" id="whatsappLink">WhatsApp</a>
+          <a href="#" class="btn ghost" id="discordLink">Discord</a>
         </div>
 
-        <div class="contact-mail">Miguelferreira.timeline@gmail.com</div>
+        <div class="contact-mail">Miguelferreira.timeline@gmail.com <span class="contact-sep">•</span> Discord: <span id="discordName">miguel.ferreira_timeline</span></div>
       </div>
     </section>
   </main>
 
   <footer>
-    <a class="logo" href="#inicio">MA<span>.</span></a>
+    <a class="logo" href="#inicio">MF<span>.</span></a>
     <p>© <span id="year"></span> Miguel Ferreira — Video Editor</p>
     <a href="#inicio">Voltar ao topo ↑</a>
   </footer>
+
+
+  <div class="video-modal" id="videoModal" aria-hidden="true">
+    <div class="video-modal-backdrop" data-close-modal></div>
+    <div class="video-modal-dialog" role="dialog" aria-modal="true" aria-label="Player de vídeo">
+      <button class="video-modal-close" type="button" aria-label="Fechar vídeo" data-close-modal>×</button>
+      <div class="video-frame-wrap">
+        <iframe
+          id="videoFrame"
+          src=""
+          title="Vídeo do portfólio"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>
