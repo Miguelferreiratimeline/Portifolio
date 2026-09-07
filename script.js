@@ -12,7 +12,7 @@ document.getElementById("year").textContent = new Date().getFullYear();
 
 // Coloque seu número com DDI +55 aqui.
 // Exemplo: const phone = "5531999999999";
-const phone = "";
+const phone = "5531991094042";
 
 const whatsappLink = document.getElementById("whatsappLink");
 
@@ -22,7 +22,7 @@ if (phone) {
 } else {
   whatsappLink.addEventListener("click", (e) => {
     e.preventDefault();
-    alert("Adicione seu número de WhatsApp no arquivo script.js para ativar este botão.");
+    
   });
 }
 
